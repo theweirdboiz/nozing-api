@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+	<changeSet id="create-songs-table" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="table songs already exists">
+			<not>
+				<tableExists tableName="songs" />
+			</not>
+		</preConditions>
+		<createTable tableName="songs">
+			<column name="id" type="varchar(10)">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="songs-table-add-column-name" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="column name already exists">
+			<not>
+				<columnExists tableName="songs" columnName="name" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="name" type="varchar(255)">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-source" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="column source already exists">
+			<not>
+				<columnExists tableName="songs" columnName="source" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="source" type="text">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-alias" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum alias already exists">
+			<not>
+				<columnExists tableName="songs" columnName="alias" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="alias" type="text">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-thumbnail" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum thumbnail already exists">
+			<not>
+				<columnExists tableName="songs" columnName="thumbnail" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="thumbnail" type="text">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-thumbnailM" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum thumbnailM already exists">
+			<not>
+				<columnExists tableName="songs" columnName="thumbnailM" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="thumbnailM" type="text">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-link" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum link already exists">
+			<not>
+				<columnExists tableName="songs" columnName="link" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="link" type="text">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-duration" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum duration already exists">
+			<not>
+				<columnExists tableName="songs" columnName="duration" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="duration" type="int">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-releaseDate" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum releaseDate already exists">
+			<not>
+				<columnExists tableName="songs" columnName="releaseDate" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="releaseDate" type="bigint">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-like" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum like already exists">
+			<not>
+				<columnExists tableName="songs" columnName="like" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="like" type="bigint">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+	<changeSet id="songs-table-add-column-listen" author="songs" runAlways="true">
+		<preConditions onFail="CONTINUE" onFailMessage="colum listen already exists">
+			<not>
+				<columnExists tableName="songs" columnName="listen" />
+			</not>
+		</preConditions>
+		<addColumn tableName="songs">
+			<column name="listen" type="bigint">
+				<constraints nullable="false" />
+			</column>
+		</addColumn>
+	</changeSet>
+</databaseChangeLog>
