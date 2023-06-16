@@ -1,0 +1,2 @@
+INSERT INTO songs(id, name, source, alias, thumbnail, thumbnailM, link, duration, releaseDate, `like`, listen)
+VALUES ('axASDf','If i miss u','asdfsd','asdfsd','asdfsd','asdfsadf','asdfsdf',123,199912,232,1231);
